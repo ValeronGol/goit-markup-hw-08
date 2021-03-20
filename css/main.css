@@ -127,15 +127,15 @@ ul {
   margin-bottom: 50px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .container {
     max-width: 768px;
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .container {
-    max-width: 768px;
+    max-width: 1200px;
   }
 }
 

@@ -10,8 +10,9 @@
   margin: 0 auto;
   padding: 94px 0;
 
-  &--notpadding{padding-bottom: 0;}
-
+  &--notpadding {
+    padding-bottom: 0;
+  }
 }
 
 .section__title {
@@ -25,11 +26,14 @@
   margin-bottom: 50px;
 }
 
-@media (min-width: $desktop-with) {
-  .container {max-width: $desktop-with;}
+@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .container {
+    max-width: $tablet-width;
+  }
 }
 
-@media (min-width: $tablet-with) {
-  .container {max-width: $tablet-with;}
+@media screen and (min-width: $desktop-width) {
+  .container {
+    max-width: $desktop-width;
+  }
 }
-
