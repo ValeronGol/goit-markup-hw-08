@@ -1,0 +1,13 @@
+.header {
+  margin: 0 auto;
+  border-bottom: 1px #ECECEC solid;
+  background-color: #ffffff;
+}
+
+.header__container {
+  @include flexbox(center, space-between);
+}
+
+.header__nav {
+  @include flexbox();
+}

@@ -1,0 +1,20 @@
+@mixin flexbox($align: center, $justify: flex-start) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid($margin) {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1 * $margin / 2;
+}
+
+@mixin grid-item($margin, $number) {
+  flex-basis: calc(100% / #{$number} - #{$margin});
+  margin: $margin / 2;
+}
+
+@mixin transition($type) {
+  transition: $type $animу-dur $timing-function;
+}

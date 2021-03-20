@@ -1,0 +1,42 @@
+.contact-header  {
+  display: flex;
+}
+
+.contact-header__item:not(:last-child){
+  margin-right: 50px;
+}
+
+.contact-header__link {
+  @include flexbox();
+  @extend %link;
+  @extend %nav-link;
+  color: $primary-text-color;
+  @include transition(bcolor); 
+
+  &:hover, &:focus{
+    color: $accent-color;}
+
+}
+
+.contact-header__icon {
+  @extend %icon;
+  margin-right: 10px;
+}
+
+.contact-footer__item:not(:first-child) {
+  margin-top: 9px;
+} 
+
+.contact-footer__link {
+  @extend %link;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  
+
+  &:focus {
+    color: $primary-white-color;}
+}
+

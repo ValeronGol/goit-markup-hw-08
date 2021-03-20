@@ -1,0 +1,58 @@
+.footer {
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $dark-background-color;
+}
+
+.footer__container {
+  @include flexbox(baseline, space-between);
+}
+
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-white-color;
+}
+
+.sign__caption {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+
+.form-sign {
+  position: relative;
+  display: flex;
+}
+
+.form-sign__input {
+  width: 358px;
+  height: 50px;
+  padding-left: 15px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6)
+}
+
+.form-sign__btn {
+  @include flexbox($justify: center);
+  @extend %button;
+  margin-left: 12px;
+  padding: 10px 29px;
+}
+
+.form-sign__icon {
+  @extend %icon;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
