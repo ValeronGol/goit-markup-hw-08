@@ -109,7 +109,7 @@ ul {
 
 .section {
   margin: 0 auto;
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .section--notpadding {
@@ -119,12 +119,11 @@ ul {
 .section__title {
   margin-top: 0;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.178;
   text-align: center;
-  letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -136,6 +135,15 @@ ul {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+  }
+  .section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+  .section {
+    padding: 94px 0;
   }
 }
 
@@ -280,8 +288,6 @@ ul {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: #f5f4fa;
   text-align: center;
 }

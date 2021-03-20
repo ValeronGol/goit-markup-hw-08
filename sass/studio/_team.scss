@@ -1,4 +1,4 @@
-.team__list{
+.team__list {
   @include grid($set-gap);
 }
 
@@ -8,8 +8,6 @@
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: $secondary-background-color;
   text-align: center;
 }
@@ -23,7 +21,7 @@
   padding: 30px 32px 30px 32px;
 }
 
-.team__title {  
+.team__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -40,4 +38,3 @@
   letter-spacing: 0.03em;
   color: $primary-text-color;
 }
-

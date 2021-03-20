@@ -8,7 +8,7 @@
 
 .section {
   margin: 0 auto;
-  padding: 94px 0;
+  padding: 60px 0;
 
   &--notpadding {
     padding-bottom: 0;
@@ -18,12 +18,11 @@
 .section__title {
   margin-top: 0;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.178;
   text-align: center;
-  letter-spacing: 0.03em;
   color: $title-text-color;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
@@ -35,5 +34,16 @@
 @media screen and (min-width: $desktop-width) {
   .container {
     max-width: $desktop-width;
+  }
+
+  .section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+
+  .section {
+    padding: 94px 0;
   }
 }
