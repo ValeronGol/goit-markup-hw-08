@@ -1,7 +1,7 @@
 .logo {
   display: block;
   font-weight: 700;
-  font-family: $secondary-font-famil;
+  font-family: $secondary-font-family;
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.03px;
@@ -9,23 +9,23 @@
   text-decoration: none;
   outline: none;
 
-  @media screen and (min-width: 1200px){
+  @media screen and (min-width: $container-width) {
     font-size: 26px;
-    line-height: 1.19; }
-  
-}
-
-.logo__white-theme {
-  color: #000000;
+    line-height: 1.19;
+  }
 }
 
 .logo__dark-theme {
+  color: #000000;
+}
+
+.logo__white-theme {
   color: $primary-white-color;
 }
 
 .footer__logo {
   margin-bottom: 20px;
   @media screen and (max-width: 1199px) {
-    text-align: center;}
-  
+    text-align: center;
+  }
 }

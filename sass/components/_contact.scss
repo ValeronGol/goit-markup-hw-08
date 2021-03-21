@@ -1,18 +1,19 @@
-.contact-header  {
+.contact-header {
   @extend %list;
 
-  @media screen and (min-width: 1200px) {
-    display: flex;}
-
+  @media screen and (min-width: $container-width) {
+    display: flex;
+  }
 }
 
-.contact-header__item:not(:last-child){
-  
-  @media screen and (min-width: 1200px) {
-    margin-right: 50px;}
+.contact-header__item:not(:last-child) {
+  @media screen and (min-width: $container-width) {
+    margin-right: 50px;
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+  }
 }
 
 .contact-header__link {
@@ -21,25 +22,27 @@
   @extend %nav-link;
   color: $primary-text-color;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $container-width) {
     padding-top: 32px;
-    padding-bottom: 32px;}
+    padding-bottom: 32px;
+  }
 
-  &:hover, &:focus{
-    color: $accent-color;}
-
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .contact-header__icon {
   @extend %icon;
   margin-right: 8px;
-
 }
 
 .contact-footer {
   @media screen and (max-width: 1199px) {
     text-align: center;
-    margin-bottom: 60px;}
+    margin-bottom: 60px;
+  }
 }
 
 .contact-footer__list {
@@ -53,12 +56,12 @@
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms $timing-function;
 
-  &:hover, &:focus {
-    color: $primary-white-color;}
-
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+  }
 }
 
 .contact-footer__item:not(:last-child) {
   margin-bottom: 9px;
 }
-

@@ -1,10 +1,12 @@
 .header {
   margin: 0 auto;
-  border-bottom: 1px #ececec solid;
+  border-bottom: 1px #ECECEC solid;
   background-color: #ffffff;
 }
 
 .header__container {
+  
   @include flexbox(center, space-between);
   min-height: 60px;
+
 }
