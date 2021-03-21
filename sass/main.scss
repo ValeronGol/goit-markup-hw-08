@@ -1,23 +1,23 @@
-@import './utils/variables';
-@import './utils/mixin';
-@import './utils/placeholder';
+@import "./utils/variables";
+@import "./utils/placeholder";
+@import "./utils/mixin";
 
-@import './base/common';
-@import './base/visually';
-@import './base/container';
+@import "./base/common";
+@import "./base/visually";
+@import "./base/container";
 
-@import './studio/hero';
-@import './studio/feature';
-@import './studio/specialization';
-@import './studio/team';
-@import './studio/clients';
+@import "./layout/page-header";
+@import "./layout/hero";
+@import "./layout/feature";
+@import "./layout/specialization";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/page-footer";
+@import "./layout/portfolio";
 
-@import './portfolio/portfolio';
-
-@import './components/logo';
-@import './components/navigation';
-@import './components/contact';
-@import './components/social';
-@import './components/modal';
-@import './components/page-header';
-@import './components/page-footer';
+@import "./components/logo";
+@import "./components/navigation";
+@import "./components/contact";
+@import "./components/social";
+@import "./components/modal";
+@import "./components/mobilemenu";

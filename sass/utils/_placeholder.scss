@@ -1,6 +1,12 @@
 %icon {
   fill: currentColor;
-  @include transition(fill);
+  transition: fill 250ms $timing-function;
+}
+
+%list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 %link {
@@ -16,31 +22,27 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-decoration: none;
-  outline: none;
   background-color: $accent-color;
   color: $primary-white-color;
   border: 0;
   border-radius: 4px;
 
-  &:hover {
-    cursor: pointer;
-  }
+  &:hover {cursor: pointer;}
+
 }
 
 %input {
   width: 100%;
-  padding: 12px 42px;
+  padding: 11px 30px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
 %nav-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.14;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em;  
   color: $title-text-color;
-  @include transition(color);
+  transition: color 250ms $timing-function;
 }

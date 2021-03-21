@@ -15,82 +15,113 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./CSS/main.min.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container header__container">
-        <nav class="header__nav">
+      <div class="container">
+        <div class="header__container">
           <a href="./" class="logo"
-            >Web<span class="logo__dark-theme">Studio</span></a
+            >Web<span class="logo__white-theme">Studio</span></a
           >
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a
-                href="./portfolio.html"
-                class="site-nav__link site-nav__link--current"
-                >Портфолио</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contact-header">
-          <li class="contact-header__item">
-            <a href="mailto:info@example.com" class="contact-header__link">
-              <svg class="contact-header__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              <span>info@example.com</span>
-            </a>
-          </li>
-          <li class="contact-header__item">
-            <a href="tel:380961111111" class="contact-header__link">
-              <svg class="contact-header__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              <span>+38 096 111 11 11</span></a
+          <button
+            type="button"
+            class="js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobilemenu-container"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
             >
-          </li>
-        </ul>
+              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="menu-container">
+            <nav class="header__nav">
+              <ul class="site-nav">
+                <li class="site-nav__item">
+                  <a href="./index.html" class="site-nav__link">Студия</a>
+                </li>
+                <li class="site-nav__item">
+                  <a
+                    href="./portfolio.html"
+                    class="site-nav__link site-nav__link--current"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="site-nav__item">
+                  <a href="" class="site-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="contact-header">
+              <li class="contact-header__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contact-header__link"
+                >
+                  <svg class="contact-header__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  <span>info@devstudio.com</span>
+                </a>
+              </li>
+              <li class="contact-header__item">
+                <a href="tel:380961111111" class="contact-header__link">
+                  <svg class="contact-header__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  <span>+38 096 111 11 11</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <section class="section">
         <div class="container">
           <h1 class="visually-hidden">Портфолио</h1>
-          <ul class="projectfilter">
-            <li class="projectfilter__item">
-              <button class="projectfilter__btn projectfilter__btn--current">
-                Все
-              </button>
-            </li>
-            <li class="projectfilter__item">
-              <button class="projectfilter__btn">Веб-сайты</button>
-            </li>
-            <li class="projectfilter__item">
-              <button class="projectfilter__btn">Приложения</button>
-            </li>
-            <li class="projectfilter__item">
-              <button class="projectfilter__btn">Дизайн</button>
-            </li>
-            <li class="projectfilter__item">
-              <button class="projectfilter__btn">Маркетинг</button>
-            </li>
-          </ul>
+          <div class="filter-wrap">
+            <ul class="projectfilter">
+              <li class="projectfilter__item">
+                <button class="projectfilter__btn projectfilter__btn--current">
+                  Все
+                </button>
+              </li>
+              <li class="projectfilter__item">
+                <button class="projectfilter__btn">Веб-сайты</button>
+              </li>
+              <li class="projectfilter__item">
+                <button class="projectfilter__btn">Приложения</button>
+              </li>
+              <li class="projectfilter__item">
+                <button class="projectfilter__btn">Дизайн</button>
+              </li>
+              <li class="projectfilter__item">
+                <button class="projectfilter__btn">Маркетинг</button>
+              </li>
+            </ul>
+          </div>
           <ul class="portfolio">
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio1.jpg"
+                    srcset="
+                      ./images/img_portfolio1.jpg     370w,
+                      ./images/img_portfolio1t.jpg    354w,
+                      ./images/img_portfolio1m.jpg    450w,
+                      ./images/img_portfolio1@2x.jpg  740w,
+                      ./images/img_portfolio1t@2x.jpg 708w,
+                      ./images/img_portfolio1m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio1m.jpg"
                     alt="Проэкт 1"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -111,9 +142,17 @@
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio2.jpg"
+                    srcset="
+                      ./images/img_portfolio2.jpg     370w,
+                      ./images/img_portfolio2t.jpg    354w,
+                      ./images/img_portfolio2m.jpg    450w,
+                      ./images/img_portfolio2@2x.jpg  740w,
+                      ./images/img_portfolio2t@2x.jpg 708w,
+                      ./images/img_portfolio2m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio2m.jpg"
                     alt="Проэкт 2"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -136,9 +175,17 @@
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio3.jpg"
+                    srcset="
+                      ./images/img_portfolio3.jpg     370w,
+                      ./images/img_portfolio3t.jpg    354w,
+                      ./images/img_portfolio3m.jpg    450w,
+                      ./images/img_portfolio3@2x.jpg  740w,
+                      ./images/img_portfolio3t@2x.jpg 708w,
+                      ./images/img_portfolio3m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio3m.jpg"
                     alt="Проэкт 3"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -159,9 +206,17 @@
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio4.jpg"
+                    srcset="
+                      ./images/img_portfolio4.jpg     370w,
+                      ./images/img_portfolio4t.jpg    354w,
+                      ./images/img_portfolio4m.jpg    450w,
+                      ./images/img_portfolio4@2x.jpg  740w,
+                      ./images/img_portfolio4t@2x.jpg 708w,
+                      ./images/img_portfolio4m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio4m.jpg"
                     alt="Проэкт 4"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -182,9 +237,17 @@
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio5.jpg"
+                    srcset="
+                      ./images/img_portfolio5.jpg     370w,
+                      ./images/img_portfolio5t.jpg    354w,
+                      ./images/img_portfolio5m.jpg    450w,
+                      ./images/img_portfolio5@2x.jpg  740w,
+                      ./images/img_portfolio5t@2x.jpg 708w,
+                      ./images/img_portfolio5m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio5m.jpg"
                     alt="Проэкт 5"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -205,9 +268,17 @@
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio6.jpg"
+                    srcset="
+                      ./images/img_portfolio6.jpg     370w,
+                      ./images/img_portfolio6t.jpg    354w,
+                      ./images/img_portfolio6m.jpg    450w,
+                      ./images/img_portfolio6@2x.jpg  740w,
+                      ./images/img_portfolio6t@2x.jpg 708w,
+                      ./images/img_portfolio6m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio6m.jpg"
                     alt="Проэкт 6"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -228,9 +299,17 @@
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio7.jpg"
+                    srcset="
+                      ./images/img_portfolio7.jpg     370w,
+                      ./images/img_portfolio7t.jpg    354w,
+                      ./images/img_portfolio7m.jpg    450w,
+                      ./images/img_portfolio7@2x.jpg  740w,
+                      ./images/img_portfolio7t@2x.jpg 708w,
+                      ./images/img_portfolio7m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio7m.jpg"
                     alt="Проэкт 7"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -251,9 +330,17 @@
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio8.jpg"
+                    srcset="
+                      ./images/img_portfolio8.jpg     370w,
+                      ./images/img_portfolio8t.jpg    354w,
+                      ./images/img_portfolio8m.jpg    450w,
+                      ./images/img_portfolio8@2x.jpg  740w,
+                      ./images/img_portfolio8t@2x.jpg 708w,
+                      ./images/img_portfolio8m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio8m.jpg"
                     alt="Проэкт 8"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -274,9 +361,17 @@
               <a href="" class="portfolio__link">
                 <div class="project">
                   <img
-                    class="project__image"
-                    src="./images/img_portfolio9.jpg"
+                    srcset="
+                      ./images/img_portfolio9.jpg     370w,
+                      ./images/img_portfolio9t.jpg    354w,
+                      ./images/img_portfolio9m.jpg    450w,
+                      ./images/img_portfolio9@2x.jpg  740w,
+                      ./images/img_portfolio9t@2x.jpg 708w,
+                      ./images/img_portfolio9m@2x.jpg 900w
+                    "
+                    src="./images/img_portfolio9m.jpg"
                     alt="Проэкт 9"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
                   />
                   <div class="project__content">
                     <p class="project__meta">
@@ -301,24 +396,29 @@
       <div class="container footer__container">
         <div>
           <a href="./" class="logo footer__logo"
-            >Web<span class="logo__white-theme">Studio</span></a
+            >Web<span class="logo__dark-theme">Studio</span></a
           >
-          <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
-          <ul class="contact-footer__list">
-            <li class="contact-footer__item"></li>
-            <li class="contact-footer__item">
-              <a href="mailto:info@example.com" class="contact-footer__link"
-                >info@example.com</a
-              >
-            </li>
-            <li class="contact-footer__item">
-              <a href="tel:380961111111" class="contact-footer__link"
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+          <address class="contact-footer">
+            <ul class="contact-footer__list">
+              <li class="contact-footer__item">
+                <a href="" class="contact-footer__link"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li class="contact-footer__item">
+                <a href="mailto:info@devstudio.com" class="contact-footer__link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contact-footer__item">
+                <a href="tel:380961111111" class="contact-footer__link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
         </div>
-        <div>
+        <div class="social-wrap">
           <p class="social__caption">Присоединяйтесь</p>
           <ul class="social">
             <li class="social__item">
@@ -368,5 +468,65 @@
         </div>
       </div>
     </footer>
+    <div class="mobilemenu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="js-close-menu">
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use
+            class="header__icon-cross"
+            href="./images/icons.svg#icon-close_40px"
+          ></use>
+        </svg>
+      </button>
+      <div class="mobile-nav">
+        <ul class="mobile-menu">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link">Студия</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a
+              href="./portfolio.html"
+              class="mobile-menu__link mobile-menu__link--current"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="contact-mobile">
+        <li class="contact-mobile__item">
+          <a href="mailto:info@devstudio.com" class="contact-mobile__link">
+            <svg class="contact-mobile__icon" width="16" height="12">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>
+            <span>info@devstudio.com</span>
+          </a>
+        </li>
+        <li class="contact-mobile__item">
+          <a href="tel:380961111111" class="contact-mobile__link">
+            <svg class="contact-mobile__icon" width="16" height="12">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>
+            <span>+38 096 111 11 11</span></a
+          >
+        </li>
+      </ul>
+      <ul class="menu-social">
+        <li class="menu-social__item">
+          <a class="menu-social__link" href="">Instagram</a>
+        </li>
+        <li class="menu-social__item">
+          <a class="menu-social__link" href="">Twitter</a>
+        </li>
+        <li class="menu-social__item">
+          <a class="menu-social__link" href="">Facebook</a>
+        </li>
+        <li class="menu-social__item">
+          <a class="menu-social__link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

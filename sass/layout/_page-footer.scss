@@ -1,0 +1,80 @@
+.footer {
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $dark-background-color;
+}
+
+.footer__container {
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    @include flexbox(baseline, space-around);
+    flex-wrap: wrap;}
+  
+  @media screen and (min-width: 1200px) {
+    @include flexbox(baseline, space-between);}
+}
+
+.sign__caption {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $primary-white-color;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;}
+  
+}
+
+.form-sign {
+  display: flex;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.25;
+
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;}
+ 
+}
+
+.form-sign__input {
+  height: 50px;
+  padding-left: 15px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    width: 450px;}
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;}
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;}
+}
+
+.form-sign__btn {
+  @include flexbox($justify: center);
+  @extend %button;
+  margin-left: 12px;
+  padding: 10px 28px;
+  max-width: 200px;
+
+  &:hover, &:focus {
+    background-color: #188CE8;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;}
+
+}
+
+.form-sign__icon {
+  @extend %icon;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}

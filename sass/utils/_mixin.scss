@@ -10,11 +10,7 @@
   margin: -1 * $margin / 2;
 }
 
-@mixin grid-item($margin, $number) {
-  flex-basis: calc(100% / #{$number} - #{$margin});
+@mixin grid-item($margin, $qty) {
+  flex-basis: calc(100% / #{$qty} - #{$margin});
   margin: $margin / 2;
-}
-
-@mixin transition($type) {
-  transition: $type $animу-dur $timing-function;
 }
