@@ -5,20 +5,16 @@
   padding-right: 15px;
   min-width: 320px;
 
-  @media screen and (max-width: 479px) {
+  @media screen and (min-width: 480px) {
     max-width: 480px;
   }
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 768px;
   }
 
   @media screen and (min-width: $container-width) {
-    width: $container-width;
+    max-width: $container-width;
   }
 }
 
