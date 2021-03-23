@@ -2,7 +2,7 @@
   padding-top: 118px;
   padding-bottom: 118px;
   min-height: 400px;
-  // max-width: 480px;
+  max-width: 480px;
   margin: 0 auto;
   background-color: #c4c4c4;
   background-image: linear-gradient(to right, $gradient-color, $gradient-color),
@@ -74,7 +74,6 @@
 
   &:hover,
   &:focus {
-    background-color: #188ce8;
     cursor: pointer;
   }
 }

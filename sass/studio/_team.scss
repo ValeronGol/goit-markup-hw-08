@@ -1,5 +1,4 @@
 .team__list {
-  @extend %list;
   @media screen and (min-width: 768px) {
     @include grid($set-gap);
   }
@@ -36,7 +35,7 @@
   }
 }
 
-.team__imgthumb {
+.team__img--thumb {
   height: 460px;
   overflow: hidden;
 

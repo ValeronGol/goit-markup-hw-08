@@ -16,11 +16,24 @@
   }
 }
 
+.address {
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $primary-white-color;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
 .sign__caption {
   display: block;
   margin-top: 0;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   color: $primary-white-color;
 
@@ -65,13 +78,8 @@
   @include flexbox($justify: center);
   @extend %button;
   margin-left: 12px;
-  padding: 10px 28px;
+  padding: 10px 29px;
   max-width: 200px;
-
-  &:hover,
-  &:focus {
-    background-color: #188ce8;
-  }
 
   @media screen and (max-width: 1199px) {
     margin: 0 auto;

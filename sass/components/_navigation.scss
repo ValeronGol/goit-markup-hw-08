@@ -37,8 +37,6 @@
 }
 
 .site-nav {
-  @extend %list;
-
   display: flex;
 
   @media screen and (max-width: 1199px) {
@@ -48,6 +46,10 @@
 
   @media screen and (min-width: $container-width) {
     margin-left: 93px;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 50px;
   }
 }
 
@@ -78,11 +80,5 @@
     height: 4px;
     border-radius: 2px;
     background-color: $accent-color;
-  }
-}
-
-.site-nav__item {
-  &:not(:last-child) {
-    margin-right: 50px;
   }
 }

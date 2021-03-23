@@ -1,4 +1,4 @@
-.social__caption{
+.social__caption {
   display: block;
   margin-top: 0;
   margin-bottom: 20px;
@@ -9,36 +9,45 @@
   color: $primary-white-color;
 
   @media screen and (max-width: 1199px) {
-    text-align: center;}
+    text-align: center;
+  }
 }
 
 .social-wrap {
   @media screen and (max-width: 1199px) {
-    margin-bottom: 60px;}
+    margin-bottom: 60px;
+  }
 }
 
 .social {
   @include flexbox($justify: space-between);
-  @extend %list;
 
   @media screen and (max-width: 1199px) {
     max-width: 206px;
-    margin: 0 auto;}
+    margin: 0 auto;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 10px;
+  }
 }
 
 .social__link {
   @include flexbox($justify: center);
   @extend %link;
-  height: 44px;
-  width: 44px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   color: $primary-white-color;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms $timing-function;
+  @include transition(background-color);
+  @include transition(color);
+  @include transition(box-shadow);
 
-  &:hover, &:focus {
-    background-color: $accent-color;}
-
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .social__icon {
@@ -47,31 +56,30 @@
   width: 20px;
 }
 
-.social__item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .teamsocial {
   @include flexbox($justify: space-between);
-  @extend %list;
 
   @media screen and (max-width: 1199px) {
     max-width: 206px;
-    margin: 0 auto;}
+    margin: 0 auto;
+  }
 }
 
 .teamsocial__link {
   @include flexbox($justify: center);
   @extend %link;
-  height: 44px;
-  width: 44px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   color: $primary-icon-color;
-  transition: color 250ms $timing-function, background-color 250ms $timing-function;
-  
-  &:hover, &:focus {
+  @include transition(background-color);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
     color: $primary-white-color;
-    background-color: $accent-color;}
+    background-color: $accent-color;
+  }
 }
 
 .teamsocial__icon {
@@ -82,30 +90,29 @@
 
 .menu-social {
   @include flexbox();
-  @extend %list;
 
   flex-wrap: wrap;
   margin-left: -10px;
-  
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
 
-.menu-social__item{
+.menu-social__item {
   padding: 0 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
 
-
   &:last-child {
-    padding-right: 0;}
+    padding-right: 0;
+  }
 
   &:not(:last-child) {
-    border-right: 1px solid rgba(33, 33, 33, 0.2);}
-
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
 }
 
 .menu-social__link {

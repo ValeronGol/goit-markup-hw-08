@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
+    <!-- шапка сайта -->
     <header class="header">
       <div class="container">
         <div class="header__container">
@@ -191,14 +192,14 @@
         </div>
       </section>
 
-      <!-- Команда -->
+      <!--Наша Команда -->
       <section class="section team">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
               <div class="team__thumb">
-                <div class="team__imgthumb">
+                <div class="team__img--thumb">
                   <img
                     class="team__img"
                     srcset="./images/team1m.jpg 1x, ./images/team1m@2x.jpg 2x"
@@ -253,7 +254,7 @@
             </li>
             <li class="team__item">
               <div class="team__thumb">
-                <div class="team__imgthumb">
+                <div class="team__img--thumb">
                   <img
                     class="team__img"
                     srcset="./images/team2m.jpg 1x, ./images/team2m@2x.jpg 2x"
@@ -308,7 +309,7 @@
             </li>
             <li class="team__item">
               <div class="team__thumb">
-                <div class="team__imgthumb">
+                <div class="team__img--thumb">
                   <img
                     class="team__img"
                     srcset="./images/team3m.jpg 1x, ./images/team3m@2x.jpg 2x"
@@ -363,7 +364,7 @@
             </li>
             <li class="team__item">
               <div class="team__thumb">
-                <div class="team__imgthumb">
+                <div class="team__img--thumb">
                   <img
                     class="team__img"
                     srcset="./images/team4m.jpg 1x, ./images/team4m@2x.jpg 2x"
@@ -463,31 +464,26 @@
         </div>
       </section>
     </main>
+    <!-- подвал сайта -->
     <footer class="footer">
       <div class="container footer__container">
         <div>
           <a href="./" class="logo footer__logo"
             >Web<span class="logo__white-theme">Studio</span></a
           >
-          <address class="contact-footer">
-            <ul class="contact-footer__list">
-              <li class="contact-footer__item">
-                <a href="" class="contact-footer__link"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
-              </li>
-              <li class="contact-footer__item">
-                <a href="mailto:info@devstudio.com" class="contact-footer__link"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="contact-footer__item">
-                <a href="tel:380961111111" class="contact-footer__link"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-          </address>
+          <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
+          <ul class="contact-footer__list">
+            <li class="contact-footer__item">
+              <a href="mailto:info@devstudio.com" class="contact-footer__link"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="contact-footer__item">
+              <a href="tel:380961111111" class="contact-footer__link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
         </div>
         <div class="social-wrap">
           <p class="social__caption">Присоединяйтесь</p>
@@ -539,6 +535,7 @@
         </div>
       </div>
     </footer>
+    <!-- модальное окно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="close-btn" aria-label="Закрыть" data-modal-close>
@@ -593,27 +590,30 @@
             </div>
           </div>
           <div class="form-modal__field">
-            <label class="form-modal__label" for="user-comment">Почта</label>
+            <label class="form-modal__label" for="user-comment"
+              >Комментарий</label
+            >
             <textarea
               class="form-modal__textarea"
               name="comment"
               id="user-comment"
-              rows="8"
+              rows="6"
               placeholder="Введите текст"
             ></textarea>
           </div>
           <div class="form-modal__policy-container">
-            <input
-              class="form-modal__checkbox policy-checkbox visually-hidden"
-              type="checkbox"
-              name="policy"
-              id="policy"
-            />
             <label
               class="form-modal__label form-modal__label--policy"
               for="policy"
-            >
-              <span class="checkbox-icon"></span>
+              ><input
+                class="form-modal__checkbox policy-checkbox visually-hidden"
+                type="checkbox"
+                name="policy"
+                id="policy"
+              />
+              <svg class="form-modal_check_icon" width="16" height="15">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
               <span>Соглашаюсь с рассылкой и принимаю</span>
               <a class="form-modal__link" href="">Условия договора</a>
             </label>
@@ -622,7 +622,7 @@
         </form>
       </div>
     </div>
-
+    <!-- мобильное меню -->
     <div class="mobilemenu-container js-menu-container" id="mobile-menu">
       <button type="button" class="js-close-menu">
         <svg width="40" height="40" aria-label="Переключатель мобильного меню">
