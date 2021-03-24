@@ -33,7 +33,8 @@
   letter-spacing: 0.03em;
   color: $title-text-color;
   background-color: $secondary-background-color;
-  @include transition(color);
+  transition: background-color $animу-dur $timing-function,
+    color $animу-dur $timing-function, box-shadow $animу-dur $timing-function;
 
   &:hover,
   &:focus,
