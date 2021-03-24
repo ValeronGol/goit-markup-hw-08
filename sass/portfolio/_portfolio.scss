@@ -34,8 +34,6 @@
   color: $title-text-color;
   background-color: $secondary-background-color;
   @include transition(color);
-  @include transition(background-color);
-  @include transition(box-shadow);
 
   &:hover,
   &:focus,

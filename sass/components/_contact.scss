@@ -19,7 +19,7 @@
   @extend %link;
   @extend %nav-link;
   color: $primary-text-color;
-  @include transition(bcolor);
+  @include transition(color);
 
   @media screen and (min-width: $container-width) {
     padding-top: 32px;
